@@ -1,0 +1,77 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(to right, #f80307, #f0fc02, #13fc02);
+  }
+  
+  img {
+    display: block;
+    margin: 20px auto 10px;
+    max-width: 100%;
+    height: auto;
+    max-width: 250px;
+    src: url('C:/Users/User/Desktop/TypeScript/Lightricks/5a39085c6964a800012b9e70_Logo - Dark.png');
+  }
+
+.calculator-title {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 0px;
+}
+  
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    grid-template-columns: repeat(4, 85px);
+    grid-template-rows: minmax(85px, auto) repeat(5, 85px);
+    margin-top: 0px;
+}
+
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(225, 225, 225, .60);
+}
+
+.calculator-grid > button:hover{
+    background-color: rgba(225, 225, 225, 225);
+}
+
+.span-two{
+    grid-column: span 2;    
+}
+
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand{
+    color: rgba(225, 225, 225, .60);
+    font-size: 1.5rem;
+}
+
+.output .current-operand{
+    color: white;
+    font-size: 2.5rem;
+}
